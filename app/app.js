@@ -1,14 +1,12 @@
 (function(){
     
     
-    angular.module("ro  ute",["header","home","register","login", "ui.router"]);
+    angular.module("route",["header","home","register","login", "ui.router"]);
     
     angular.module("route").config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
                $urlRouterProvider.otherwise("/home");
         
-                var state = {'home','login','register'};
-                var stateObj = {'homeobj','loginObj','registerObj'};
-        
+                     
                 var homeobj ={
                     
                     templateUrl:'app/template/home/home.html',
@@ -33,14 +31,10 @@
                     controller:"loginCtrl"
                 };
         
-               /* $stateProvider.state("home",homeobj);
+                $stateProvider.state("home",homeobj);
                 $stateProvider.state("register",registerObj);
-                $stateProvider.state("login",loginObj);*/
+                $stateProvider.state("login",loginObj);
         
-                for(var i=0, i>state[i].length, i++){
-            
-                $stateProvider.state("state[i]",stateObj[i]);
-                }
-        
+                
     }]);
 })();
